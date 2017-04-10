@@ -14,5 +14,7 @@ RUN echo "export JRE_HOME=$JAVA_HOME/jre">>/etc/profile
 RUN echo "export CLASSPATH=$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH">>/etc/profile
 RUN echo "export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH">>/etc/profile
 
+WORKDIR /work
+
 ENTRYPOINT java -Xms256M -Xmx512M -cp ./WEB-INF/lib/*:./WEB-INF/classes cn.juor.Application --port=9003
 
