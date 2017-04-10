@@ -15,3 +15,5 @@ RUN echo "export CLASSPATH=$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH">>/etc/profil
 RUN echo "export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH">>/etc/profile
 
 WORKDIR /work
+
+ENTRYPOINT ["start.sh"]
