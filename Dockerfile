@@ -16,7 +16,7 @@ RUN echo "export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH">>/etc/profile
 
 WORKDIR /work
 
-ENTRYPOINT ["chmod", "+x", "/work/run.sh"]
+CMD ["chmod", "777", "/work/run.sh"]
 ENTRYPOINT ["ls -al"]
-ENTRYPOINT ["/work/run.sh"]
+# ENTRYPOINT ["/work/run.sh"]
 
